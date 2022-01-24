@@ -1,0 +1,18 @@
+SCS Trace Gen
+---
+
+To use the trace generator, you'll need to download Intel Pin:
+
+https://www.intel.com/content/www/us/en/developer/articles/tool/pin-a-dynamic-binary-instrumentation-tool.html
+
+Then, once extracted, set PIN_ROOT to the extracted directory, e.g.:
+
+    $ export PIN_ROOT=$HOME/downloads/pin-3.21-98484-ge7cd811fd-gcc-linux
+
+Now, you can build:
+
+    $ make
+
+And, run:
+
+    $ $PIN_ROOT/pin -t ./obj-intel64/TraceGen.so -o ls.out /bin/ls
